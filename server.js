@@ -33,7 +33,7 @@ require("./app/routes/tutorial.routes")(app);
 
 
 // listen on the port
-app.listen(port);
+app.listen(process.env.PORT || 3000 );
 
 // Set up Auth0 configuration 
 const authConfig = {
