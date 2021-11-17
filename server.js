@@ -10,7 +10,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
-const port = 3000;
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());  /* bodyParser.json() is deprecated */
 
@@ -33,7 +34,10 @@ require("./app/routes/tutorial.routes")(app);
 
 
 // listen on the port
-app.listen(process.env.PORT || 3000 );
+
+app.listen(port, host, function() {
+  console.log("Server started.......");
+});
 
 // Set up Auth0 configuration 
 const authConfig = {
