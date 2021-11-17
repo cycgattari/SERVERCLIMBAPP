@@ -1,8 +1,8 @@
 module.exports = {
-    HOST: "127.0.0.1",
-    USER: "root",
-    PASSWORD: "laviOsqu",
-    DB: "sakila",
+    HOST: "us-cdbr-east-04.cleardb.com",
+    USER: "b080b8ba01f63a",
+    PASSWORD: "010e2d0e",
+    DB: "heroku_64482aa4ea82b57",
     dialect: "mysql",
     pool: {
       max: 5,
@@ -11,4 +11,6 @@ module.exports = {
       idle: 10000
     }
   };
+  
+
   
